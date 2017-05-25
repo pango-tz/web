@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import {MdDialog} from '@angular/material';
 import {ErrorDialogComponent} from '../error-dialog/error-dialog.component';
 import {ErrorDialog} from '../models';
+import {PageHeaderService} from '../pango-services';
 
 @Component({
   selector: 'app-login',
@@ -37,7 +38,8 @@ export class LoginComponent extends PangoFormComponent implements OnInit  {
     }
   };
 
-  constructor( private fb: FormBuilder, private loginService: LoginService, private router: Router, public dialog: MdDialog ) {  super(); }
+  constructor( private fb: FormBuilder, private loginService: LoginService, private router: Router,
+    public dialog: MdDialog, private pageHeaderService: PageHeaderService ) {  super(); }
 
   handleError(err: ErrorResponse | Response) {
     this.loggingIn = false;
@@ -88,6 +90,7 @@ export class LoginComponent extends PangoFormComponent implements OnInit  {
   }
   ngOnInit() {
     super.ngOnInit();
+    this.pageHeaderService.setTitle('Login');
   }
 
 

@@ -9,6 +9,7 @@ import { environment } from '../../environments/environment';
 import { LoginService, LoginRefreshService } from './login';
 import { AuthGuardService } from './guards';
 import { LogoutService } from './logout/logout.service';
+import { PageHeaderService } from './page-header/page-header.service';
 
 const ENV = environment.apiUrl;
 
@@ -47,7 +48,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     LoginService,
     LoginRefreshService,
     AuthGuardService,
-    LogoutService
+    LogoutService,
+    PageHeaderService
   ]
 })
 export class PangoServicesModule {

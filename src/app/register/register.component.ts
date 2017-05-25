@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PageHeaderService } from '../pango-services';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor( private pageHeaderService: PageHeaderService) { }
 
   ngOnInit() {
+    this.pageHeaderService.setTitle('Register with Pango');
   }
 
 }

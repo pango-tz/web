@@ -74,7 +74,7 @@ const appRoutes: Routes = [
     AppComponent, LoginComponent, RegisterComponent, ForgotPasswordComponent, ErrorDialogComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes, { useHash: true }),
+    RouterModule.forRoot(appRoutes),
     RentalsModule,
     BrowserModule,
     FormsModule,

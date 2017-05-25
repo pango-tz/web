@@ -1,15 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RequestMethod } from '@angular/http';
+import { PageHeaderService } from '../../pango-services';
 @Component({
   moduleId: module.id,
   selector: 'app-hold-requests-root',
   templateUrl: 'manage-hold-requests.component.html',
   styleUrls: ['manage-hold-requests.component.css']
 })
-export class ManageHoldRequestsComponent {
+export class ManageHoldRequestsComponent implements OnInit {
   title = 'hello from manage hold-requests';
 
-  constructor() {
+  constructor(private pageHeaderService: PageHeaderService) {
 
+  }
+
+  ngOnInit() {
+    this.pageHeaderService.setTitle('View My Hold Requests');
   }
 }
