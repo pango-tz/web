@@ -1,0 +1,48 @@
+<md-toolbar color="primary" >
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pango Login</span>
+</md-toolbar>
+<div fxLayoutAlign="center" class="login-layout">
+
+  <md-card *ngIf="!loggingIn" fxFlex="500px" fxFlex.xs="240px">
+    <md-card-title>Sign In</md-card-title>
+    <md-card-subtitle>To access all of the features of Pango, Sign In!</md-card-subtitle>
+
+    <md-card-content>
+      <md-error style="line-height: 20px" *ngIf="submitError" color="warn">
+        <p><md-icon alt="warning">warning</md-icon> {{submitError}}</p>
+      </md-error>
+      <form [formGroup]="loginForm" class="login-div" (ngSubmit)="onSubmit()">
+        <div class="login-input">
+          <md-input-container class="login-input">
+            <input formControlName="userName" required  class="login-input" mdInput type="email"  placeholder="Email">
+            <md-error color="warn" *ngIf="formErrors.userName" >
+              {{ formErrors.userName }}
+            </md-error>
+          </md-input-container>
+        </div>
+        <div class="login-input">
+          <md-input-container class="login-input">
+            <input formControlName="password" required class="login-input" class="login-input" mdInput type="password"  placeholder="Password">
+            <md-error color="warn" *ngIf="formErrors.password">
+              {{ formErrors.password }}
+            </md-error>
+          </md-input-container>
+
+        </div>
+
+        <div class="login-input button-sign-in">
+          <button class="login-input" [disabled]="loginForm.invalid" color="primary" md-raised-button>Sign in</button>
+        </div>
+      </form>
+      <br/>
+      <div fxLayoutAlign="center">OR</div>
+      <div class="login-input button-sign-in">
+          <a class="login-input" routerLink="/register" md-raised-button color="accent"> I'm New to Pango</a>
+      </div>
+      <div class="login-input button-sign-in">
+        <a class="login-input" routerLink="/forgot-password" md-raised-button color="warn">I Forgot my Password</a>
+      </div>
+    </md-card-content>
+  </md-card>
+  <md-progress-spinner *ngIf="loggingIn" mode="indeterminate"></md-progress-spinner>
+</div>

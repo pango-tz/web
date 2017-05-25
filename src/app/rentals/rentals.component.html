@@ -1,0 +1,16 @@
+<md-toolbar color="primary" >
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pango Rentals</span>
+</md-toolbar>
+<nav fxLayoutAlign="start stretch" md-tab-nav-bar md-stretch-tabs class="mat-elevation-z5">
+  <a md-tab-link
+     *ngFor="let link of rentalsLinks"
+     [routerLink]="link.path"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive"
+     >
+    {{link.label}}
+  </a>
+</nav>
+<div class="pango-container">
+<router-outlet></router-outlet>
+</div>
