@@ -1,4 +1,5 @@
 # PangoWeb
+![Pango](.files/pango.png)
 
 To run this project and/or begin developing for this project. There are a few prerequisites
 
