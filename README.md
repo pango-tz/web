@@ -1,28 +1,38 @@
 # PangoWeb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
+To run this project and/or begin developing for this project. There are a few prerequisites
 
-## Development server
+## Prerequisites 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Install Node
+  * Download the correct installer from here: https://nodejs.org/en/download/ 
+  * After installation run the following commands from your terminal/command line to ensure that you have them installed correctly:
+    * `node -v`
+    * `npm -v`
 
-## Code scaffolding
+### Install Angular Cli
+After you have verified your node installation, run the following command from your terminal/command line:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+```
+npm install -g @angular/cli
+```
 
-## Build
+Once the installation completes, verify the installation by running the following command:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```
+ng -v
+```
 
-## Running unit tests
+You should see a picture simular to the following:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Angular Cli Verification](.files/angular-cli-verify.png)
 
-## Running end-to-end tests
+## Run app server
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+After you have followed the steps above run the following command:
+```
+ng serve --open
+```
 
-## Further help
+Your browser should open to the appropriate page and you should be able to view the site.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

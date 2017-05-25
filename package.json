@@ -1,5 +1,5 @@
 {
-  "name": "pango-web",
+  "name": "@pango/web",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
